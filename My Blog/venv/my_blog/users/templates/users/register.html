@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+</head>
+<body>
+{% extends 'my_blogs/base.html' %}
+{% load bootstrap3 %}
+{% block header %}
+    <h2>注册一个账户</h2>
+{% endblock header %}
+
+{% block content %}
+<form method="post" action="{% url 'users:register'%}" class="form">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+
+    {% buttons %}
+    <button name="submit" class="btn btn_primaty">注册</button>
+    {% endbuttons %}
+    <input type="hidden" name="next" value="{% url 'my_blogs:index' %}">
+</form>
+
+{% endblock content %}
+
+</body>
+</html>

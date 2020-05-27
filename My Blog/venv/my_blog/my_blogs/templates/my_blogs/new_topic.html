@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的博客</title>
+</head>
+<body>
+{% extends 'my_blogs/base.html' %}
+{% load bootstrap3 %}
+{% block header %}
+    <h2>添加新主题</h2>
+{% endblock header %}
+
+{% block content %}
+  <form atction = "{% url 'my_blogs:new_topic' %}" method="post" class="form">
+      {% csrf_token %}
+      {% bootstrap_form form %}
+
+      {% buttons %}
+      <button name = "submit" class="btn btn-primary">添加主题</button>
+      {% endbuttons %}
+  </form>
+
+{% endblock content %}
+
+</body>
+</html>
