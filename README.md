@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="referrer" content="origin" />
-    <meta property="og:description" content="Django 开发个人博客全过程（未完） 一、建立项目 建立虚拟环境：python -m venv&#x2B;虚拟环境名 激活虚拟环境：虚拟环境名\Scripts\activate 安装Django:解决安装超" />
+开发个人博客全过程（未完） 一、建立项目 建立虚拟环境：python -m venv&#x2B;虚拟环境名 激活虚拟环境：虚拟环境名\Scripts\activate 安装Django:解决安装超" />
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
