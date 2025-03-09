@@ -31,5 +31,5 @@ form.addEventListener('submit', function (e) {
         return alert('请勾选用户协议')
     }
     //成功再跳转
-    location.href = 'https://www.baidu.com/'
+    location.href = 'https://qsj-python.github.io/Awesome-Love-Code/Web/004/'
 })
