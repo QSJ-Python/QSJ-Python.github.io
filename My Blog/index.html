@@ -1,45 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登入页面</title>
-    <link rel="stylesheet" href="login.css">
+    <title>廖同学</title>
 </head>
-
 <body>
-    <div class="box">
-        <form action="" autocomplete="off">
-            <div class="login">
-                <div class="tab-nav">
-                    <a href="javascript:" class="active" data-id="0">用户登入</a>
-                </div>
-                <div class="nav-conter">
-                    <!-- 账户登入-->
-                    <div class="tab-pane">
-                        <div class="input-group">
-                            <input required="" type="text" autocomplete="off" class="input" name="uname">
-                            <label class="user-label">账号❥：</label>
-                        </div>
-                        <div class="input-group">
-                            <input required="" type="password" autocomplete="off" class="input" name="password">
-                            <label class="user-label">密码❥：</label>
-                        </div>
-                        <div class="ures">
-                            <input type="checkbox" name="agree">勾选协议！！！
-                        </div>
-                        <div class="reglogin">
-                            <button name="login">点击登录</button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </form>
+  <div class="login">
+    <div class="user">用户登录</div>
+    <div class="count">
+      <input type="text" name="" id="count" placeholder="账号">
     </div>
+    
+    <div class="pwd">
+      <input type="password" name="" id="pwd" placeholder="密码">
+    </div>
+    
+    <div class="submits">
+      <input type="submit" name="" onclick="submit()" value="提交">
+    </div>
+  </div>
 
-    <script src="login.js"></script>
+  <style>
+    *{
+      margin: auto;
+    }
+    input{
+      outline: none;
+      width: 300px;
+      height: 35px;
+    }
+    .login{
+      width:400px;
+      height:400px;
+      border: 1px solid black;
+      margin-top: 100px;
+      text-align: center;
+      border-radius: 10px;
+      padding: 50px;
+    }
+    .count{
+      margin: 30px 0;
+    }
+    .submits{
+      margin: 30px 0;
+    }
+    body {
+    display: flex;
+    height: 100vh;
+    background-image: url(psc.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;}
+  </style>
+
+  <script>
+
+    const mycount = "1016"
+    const mypwd = "0430"
+    function submit(){
+      let count = document.querySelector("#count").value
+      let pwd = document.querySelector("#pwd").value
+      if (count == mycount && mypwd==pwd){
+        alert("登录成功！")
+        location.href = 'https://qsj-python.github.io/Awesome-Love-Code/Web/004/'
+      }
+      else if(count != mycount || mypwd != pwd){
+        alert("用户名或密码错误：请联系你的男朋友索要！")
+      }
+    }
+
+  </script>
 </body>
-
 </html>
