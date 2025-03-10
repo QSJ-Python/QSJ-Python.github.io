@@ -6,6 +6,27 @@
     <title>廖同学</title>
 </head>
 <body>
+  <audio id="myAudio" src="love.mp3"></audio>
+  <script>
+      // 获取音频元素
+      const audio = document.getElementById('myAudio');
+
+      // 定义播放音频的函数
+      function playAudio() {
+          audio.play().then(() => {
+              console.log('音频播放成功！');
+          }).catch(err => {
+              console.error('音频播放失败：', err);
+          });
+      }
+
+      // 监听全局点击事件
+      document.addEventListener('click', () => {
+          playAudio();
+          // 移除全局点击事件监听器，避免重复触发
+          document.removeEventListener('click', playAudio);
+      });
+  </script>
   <div class="login">
     <div class="user">用户登录</div>
     <div class="count">
@@ -82,7 +103,7 @@
           return alert('请签署睡前报晚安协议！')
       }
       if (count == mycount && mypwd==pwd){
-        alert("您的权限不足，该网站只对真心道晚安100次的人开放！")
+        alert("对不起，您的权限不足，本网站只对真心道晚安>100次的人开放!")
       }
       else if(count != mycount || mypwd != pwd){
         alert("用户名或密码错误：请联系你的男朋友索要！")
